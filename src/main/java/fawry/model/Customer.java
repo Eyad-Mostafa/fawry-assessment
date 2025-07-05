@@ -29,20 +29,20 @@ public class Customer {
     if (cart.items == null) {
       throw new IllegalStateException("Cart items map is not initialized");
     }
-    if (product.name == null || product.name.isEmpty()) {
+    if (product.getName() == null || product.getName().isEmpty()) {
       throw new IllegalArgumentException("Product name cannot be null or empty");
     }
-    if (product.price < 0) {
+    if (product.getPrice() < 0) {
       throw new IllegalArgumentException("Product price cannot be negative");
     }
-    if (product.quantity < 0) {
+    if (product.getQuantity() < 0) {
       throw new IllegalArgumentException("Product quantity cannot be negative");
     }
     if (quantity <= 0) {
       throw new IllegalArgumentException("Quantity must be greater than zero");
     }
-    if (product.quantity < quantity) {
-      throw new IllegalArgumentException("Insufficient product quantity available");
+    if (product.getQuantity() < quantity) {
+      throw new IllegalArgumentException("Insufficient product (" + product.name + ") quantity available");
     }
     cart.items.merge(product, quantity, Integer::sum);
   }
