@@ -8,8 +8,9 @@ import fawry.model.Shippable;
 public class Cheese extends ExpirableProduct implements Shippable {
   double weight;
 
-  public Cheese(String name, double price, int quantity, LocalDate expirationDate) {
+  public Cheese(String name, double price, int quantity, double weight, LocalDate expirationDate) {
     super(name, price, quantity, expirationDate);
+    this.weight = weight;
   }
 
   @Override

@@ -7,6 +7,7 @@ import fawry.model.Shippable;
 
 public class ShippingService {
   double shippingFee = 0;
+  double shippingFeePerKg = 0.06;
   Map<Shippable, Integer> items = new HashMap<>();
 
   public void addItem(Shippable item, int quantity) {
@@ -22,7 +23,7 @@ public class ShippingService {
       int quantity = entry.getValue();
       double itemWeight = shippable.getWeight();
 
-      shippingFee += itemWeight * quantity * 0.08;
+      shippingFee += itemWeight * quantity * shippingFeePerKg;
     }
 
     return shippingFee;
