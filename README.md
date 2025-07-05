@@ -4,7 +4,7 @@ A Java-based checkout system for managing products, carts, and shipping, designe
 
 ## Assumptions
 - **Shipping Fee**: Calculated as 0.06% of the total weight in grams (e.g., 10250g → 0.06 * 10250 = 615 EGP)
-- **Currency**: All prices and fees are in EGP (Egyptian Pound). (Note that you can change the currancy variable for chechout)
+- **Currency**: All prices and fees are in EGP (Egyptian Pound). (Note that you can change the currancy variable for checkout)
 - **Product Details**:
   - `Cheese`: Name "Cheddar", price 50.0 EGP, quantity 2, weight 250g, expires 2025-12-31.
   - `Biscuit`: Name "Lambada", price 20.0 EGP, quantity 5, weight 100g, expires 2024-11-30 (expired).
